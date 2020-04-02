@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Javascript Assignmnet 2</title>
+<script>
+    var data=[{"principal":2500,"time":"1.8"},{"principal":1000,"time":"5"},{"principal":3000,"time":"1"},{"principal":2000,"time":"3"}];
+    
+    function interestCalculator(a){
+     var interestData=[];
+     for(var i=0;i<a.length;i++){
+         var p=a[i].principal;
+         var t=a[i].time;
+         r=1;
+         if (p>=2500 && t>1 && t<3) r=3;
+         else if(p>= 2500 && t>=3) r=4;
+         else if (p<2500 || t<=1) r=2;
+         var si=(p*r*t)/100;//SI= Simple Interest
+         var id={"principal":p,"time":t,"rate":r,"interest":si}
+
+         interestData.push(id);
+     }
+     console.log(interestData);
+     return interestData;
+
+
+    }
+
+var interestData=interestCalculator(data);
+</script>
+</head>
+<body>
+
+</body>
+</html>
