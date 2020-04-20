@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function j(p) {
+    var data="";
+    var l="";
+    p=p+1;
+    for (var i=1; i<p;i++){
+        l+=i + 't,';
+    }
+var r=l.split(",");
+var arr=[];
+for(var x=0; x<(r.length-1);x++){
+    var d=r[x];
+    var d_=+(d.replace('t',""));
+    var a=(d_/2).toString();
+    var b=(d_/3).toString();
+    var c=(d_/5).toString();
+    var k="";
+    
+    if (!a.match(/\./)) k+='yu-';
+    if (!b.match(/\./)) k+='gi-';
+    if (!c.match(/\./)) k+='oh-';
+    
+    if (k){
+        arr.push(k.replace(/-$/,''));
+    }
+    else{arr.push(d);}
+
+}
+console.log(arr.toString().replace(/t/g,'').split(","));
+}
+
+j(100);
+j(60);
+</script>
+</head>
+</html>
