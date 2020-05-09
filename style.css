@@ -4,7 +4,8 @@ body{
 }
 .container{
     height: 400px;
-    width: 1000px;
+    width: 100%;
+     max-width:800px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -72,4 +73,13 @@ body{
 .option input:checked .option{
         background: #08038c;
         color: #000000;
+}
+.container-result{
+  width: 470px;
+    display: inline-block;
+    padding:10px 0 10px 0;
+    text-align: center;
+    background:  rgba(255, 255, 255, 0.5);
+    margin: 10px 0 10px 10px;
+    color: #000000;    
 }
