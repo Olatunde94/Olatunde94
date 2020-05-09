@@ -35,7 +35,7 @@ function loadNextQuestion() {
         nextButton.textContent='Finish';
     }
     if (currentQuestion== totQuestions){
-        container.style.dispaly = 'none';
+        container.style.display = 'none';
         resultCont.style.display = '';
         resultCont.textContent= 'Your Score:'+ score;
         return;
